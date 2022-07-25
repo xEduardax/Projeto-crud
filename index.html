@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <script src="script/script.js" defer></script>
+    <title>Prova - substitutiva</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Clientes</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Nascimento</th>
+                    <th>Salário</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" minlength="4" id="nome" data-index="new" class="modal-field" placeholder="Nome" required>
+                    <input type="date" id="datanasc" class="modal-field" placeholder="data nascimento" max="2004-02-02" required> 
+                    <input type="number" step="1.212" id="salario" class="modal-field" placeholder="salario" required> <!--Required = obrigatorio-->
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
